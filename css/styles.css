@@ -1,6 +1,5 @@
 :root {
   --primary:#FFF;
-  --secondary:#000;
 }
 
 * {
@@ -11,4 +10,57 @@
 html {
   background: var(--secondary);
   color: var(--primary);
+}
+.visite header {
+  grid-area: head;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  font-family: 'Yusei Magic', sans-serif;
+  font-size: 1.5em;
+}
+.visite img {
+  grid-area: img;
+  background-color: antiquewhite;
+  clip-path: circle(50% at 50% 50%);
+}
+.visite p {
+  grid-area: word;
+  align-self: center;
+}
+.button {
+  display:inline-block;
+  padding: 0.5em 3em;
+  border: 0.16em solid #FFFFFF;
+  margin: 1em 0.3em 0.3em 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 200;
+  color: #FFFF;
+  text-align: center;
+  transition: all 0.15s;
+}
+.button:hover {
+  color: #DDDD;
+  border-color: #DDDD;
+}
+.visite {
+  display: grid;
+  width: 500px;
+  padding: 1em;
+  background: linear-gradient(202deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 19%, rgba(0,212,255,1) 100%);
+  border-radius: 15%;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: 
+  "head head"
+  "img word"
+  "rating rating";
+}
+.rating {
+  grid-area: rating;
+  justify-self: center;
 }
